@@ -1,11 +1,22 @@
 Clone your fork of qmk to ~/fun/qmk_firmware
 cd ~/fun/qmk_firmware
 uv tool install qmk
+export QMK_HOME='~/fun/qmk_firmware'
 qmk setup
 
 qmk compile -e CONVERT_TO=sparkfun_pm2040 ~/fun/keebs/qmk-layouts/qmk-layout-sofle-ljd-sparkfun.json
 qmk compile -e CONVERT_TO=elite_pi ~/fun/keebs/qmk-layouts/qmk-layout-helix-ljd-elite-pi.json
 qmk compile ~/fun/keebs/qmk-layouts/qmk-layout-corne-ljd.json
+
+For more advanced stuff, first convert the .json to a keymap.c
+qmk json2c ~/fun/keebs/qmk-layouts/qmk-layout-corne-ljd.json -o keymap.c
+
+qmk config user.keyboard=crkbd/rev4_1/standard
+qmk config user.keymap=yulian
+qmk new-keymap
+
+qmk compile -kb crkbd/rev4_1/standard -km yulian
+qmk compile
 
 You can put the rp2040 into boot mode by double pressing the reset button on the keyboard!
 Corne: press qmk boot key.
@@ -13,7 +24,7 @@ Corne: press qmk boot key.
 Firmware will be in ~/qmk_firmware.
 Just copy into usb while micro in boot mode for both micros.
 
-sudo mount /dev/sd* ~/usb
-sudo cp ~/fun/qmk_firmware/<firmware> ~/usb/
+sudo mount /dev/sd<x>1 ~/usb
+sudo cp ~/fun/qmk_firmware/crkbd_rev4_1_standard_yulian.uf2 ~/usb/
 sudo umount ~/usb/
 # test keyboard half
