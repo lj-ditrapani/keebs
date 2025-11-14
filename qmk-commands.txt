@@ -3,12 +3,17 @@ cd ~/fun/qmk_firmware
 uv tool install qmk
 qmk setup
 
-qmk compile -e CONVERT_TO=sparkfun_pm2040 ~/fun/init/other/keyboard-layouts/qmk-layout-sofle-ljd-sparkfun.json
-qmk compile -e CONVERT_TO=elite_pi ~/fun/init/other/keyboard-layouts/qmk-layout-helix-ljd-elite-pi.json
-qmk compile ~/fun/init/other/keyboard-layouts/qmk-layout-corne-ljd.json
+qmk compile -e CONVERT_TO=sparkfun_pm2040 ~/fun/keebs/qmk-layouts/qmk-layout-sofle-ljd-sparkfun.json
+qmk compile -e CONVERT_TO=elite_pi ~/fun/keebs/qmk-layouts/qmk-layout-helix-ljd-elite-pi.json
+qmk compile ~/fun/keebs/qmk-layouts/qmk-layout-corne-ljd.json
 
 You can put the rp2040 into boot mode by double pressing the reset button on the keyboard!
 Corne: press qmk boot key.
 
 Firmware will be in ~/qmk_firmware.
 Just copy into usb while micro in boot mode for both micros.
+
+sudo mount /dev/sd* ~/usb
+sudo cp ~/fun/qmk_firmware/<firmware> ~/usb/
+sudo umount ~/usb/
+# test keyboard half
