@@ -1,0 +1,44 @@
+layout:
+  qmk_keyboard: corne_rotated
+  layout_name: LAYOUT_split_3x5_3
+layers:
+  BASE:
+    - ["'", y, u,l, null, null, f, c, g, .]
+    - [{h: Alt, t: o}, {h: Gui, t: i}, {h: Shift, t: a}, {h: Ctrl, t: n}, null, null, {h: Ctrl, t: h}, {h: Shift, t: t}, {h: Gui, t: s}, {h: Alt, t: r}]
+    - [",", k, b, m, null, null, d, w, p, v]
+    - {h: FUN, t: Esc}
+    - {h: NUM, t: e}
+    - {h: SYM, t: Tab}
+    - {h: SYM, t: Enter}
+    - {h: NUM, t: Space}
+    - {h: FUN, t: BSpace}
+  NUM:
+    - [null, "home", "up", "end", null, null, "4", "5", "6", null]
+    - [q, "left", "down", "right", null, null, "1", "2", "3", j]
+    - [null, null, "PgUp", "PgDn", null, null, "7", "8", "9", z]
+    - null
+    - x
+    - null
+    - "Enter"
+    - 0
+    - .
+  SYM:
+    - ["<", ">", "(", ")", null, null, "{", "}", "[", "]"]
+    - ["`", "_", "/", "-", null, null, "!", "?", "*", "="]
+    - ["~", "|", "\\", "+", null, null, "$", "&", "%", "^"]
+    - null
+    - ":"
+    - "@"
+    - "#"
+    - ";"
+    - Delete
+  FUN:
+    - [Mouse 4, Menu, Mouse up, null, null, null, F4, F5, F6, null]
+    - [Mouse 5, Mouse left, Mouse down, Mouse right, null, null, F1, F2, F3, null]
+    - ["Scrl left", "Scrl down", "Scrl up", "Scrl down", null, null, F7, F8, F9, F10]
+    - Mouse 2
+    - Mouse 1
+    - Mouse 3
+    - null
+    - F12
+    - F11
