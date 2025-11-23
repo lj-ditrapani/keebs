@@ -15,7 +15,7 @@ layers:
   NUM:
     - [null, "home", "up", "end", null, null, "4", "5", "6", null]
     - [q, "left", "down", "right", null, null, "1", "2", "3", j]
-    - [null, null, "PgUp", "PgDn", null, null, "7", "8", "9", z]
+    - [Mouse 4, Mouse 5, "PgUp", "PgDn", null, null, "7", "8", "9", z]
     - null
     - x
     - null
@@ -33,9 +33,9 @@ layers:
     - ";"
     - Delete
   FUN:
-    - [Mouse 4, Menu, Mouse up, null, null, null, F4, F5, F6, null]
-    - [Mouse 5, Mouse left, Mouse down, Mouse right, null, null, F1, F2, F3, null]
-    - ["Scrl left", "Scrl down", "Scrl up", "Scrl down", null, null, F7, F8, F9, F10]
+    - [Cut, Copy, Mouse up, Paste, null, null, F4, F5, F6, null]
+    - [Undo, Mouse left, Mouse down, Mouse right, null, null, F1, F2, F3, null]
+    - ["Scrl left", "Scrl right", "Scrl down", "Scrl up", null, null, F7, F8, F9, F10]
     - Mouse 2
     - Mouse 1
     - Mouse 3
